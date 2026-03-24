@@ -1,12 +1,20 @@
 const express = require('express');
 const router = express.Router();
-const LoanCredit = require('../models/LoanCredit');
+const mongoose = require('mongoose');
 const auth = require('../middleware/auth');
+const { readData, writeData } = require('../utils/persistentStore');
+
+const isDBConnected = () => mongoose.connection.readyState === 1;
+const getModel = () => require('../models/LoanCredit');
 
 // @route   GET api/loans
-// @desc    Get all loan/credit records
 router.get('/', auth, async (req, res) => {
+  if (!isDBConnected()) {
+    const loans = readData('loans');
+    return res.json([...loans].sort((a, b) => new Date(b.date) - new Date(a.date)));
+  }
   try {
+    const LoanCredit = getModel();
     const records = await LoanCredit.find().sort({ date: -1 });
     res.json(records);
   } catch (err) {
@@ -16,17 +24,31 @@ router.get('/', auth, async (req, res) => {
 });
 
 // @route   POST api/loans
-// @desc    Add new loan/credit entry
 router.post('/', auth, async (req, res) => {
   const { partyName, type, amount, dueDate, notes } = req.body;
-  try {
-    const newRecord = new LoanCredit({
-      partyName,
-      type,
-      amount,
-      dueDate,
-      balance: amount,
+
+  if (!isDBConnected()) {
+    const loans = readData('loans');
+    const record = {
+      _id: `file-loan-${Date.now()}`,
+      date: new Date(),
+      partyName, type,
+      amount: parseFloat(amount),
+      dueDate: dueDate || null,
+      balance: parseFloat(amount),
+      amountPaid: 0,
+      status: 'Pending',
       notes
+    };
+    loans.push(record);
+    writeData('loans', loans);
+    return res.json(record);
+  }
+
+  try {
+    const LoanCredit = getModel();
+    const newRecord = new LoanCredit({
+      partyName, type, amount, dueDate, balance: amount, notes
     });
     await newRecord.save();
     res.json(newRecord);
@@ -37,23 +59,29 @@ router.post('/', auth, async (req, res) => {
 });
 
 // @route   PUT api/loans/:id/payment
-// @desc    Record a payment
 router.put('/:id/payment', auth, async (req, res) => {
   const { paymentAmount } = req.body;
-  try {
-    const record = await LoanCredit.findById(req.params.id);
-    if (!record) return res.status(404).json({ msg: 'Record not found' });
 
+  if (!isDBConnected()) {
+    const loans = readData('loans');
+    const record = loans.find(r => r._id === req.params.id);
+    if (!record) return res.status(404).json({ msg: 'Record not found' });
     record.amountPaid += parseFloat(paymentAmount);
     record.balance = record.amount - record.amountPaid;
-    
-    if (record.balance <= 0) {
-      record.status = 'Cleared';
-      record.balance = 0;
-    } else if (record.amountPaid > 0) {
-      record.status = 'Partial';
-    }
+    if (record.balance <= 0) { record.status = 'Cleared'; record.balance = 0; }
+    else if (record.amountPaid > 0) { record.status = 'Partial'; }
+    writeData('loans', loans);
+    return res.json(record);
+  }
 
+  try {
+    const LoanCredit = getModel();
+    const record = await LoanCredit.findById(req.params.id);
+    if (!record) return res.status(404).json({ msg: 'Record not found' });
+    record.amountPaid += parseFloat(paymentAmount);
+    record.balance = record.amount - record.amountPaid;
+    if (record.balance <= 0) { record.status = 'Cleared'; record.balance = 0; }
+    else if (record.amountPaid > 0) { record.status = 'Partial'; }
     await record.save();
     res.json(record);
   } catch (err) {
@@ -63,3 +91,4 @@ router.put('/:id/payment', auth, async (req, res) => {
 });
 
 module.exports = router;
+

@@ -1,0 +1,23 @@
+[
+  {
+    "_id": "tank-1",
+    "tankName": "Tank-1 (Main North)",
+    "fuelType": "Petrol",
+    "capacity": 35000,
+    "currentVolume": 20000
+  },
+  {
+    "_id": "tank-2",
+    "tankName": "Tank-2 (Main South)",
+    "fuelType": "Diesel",
+    "capacity": 35000,
+    "currentVolume": 13000
+  },
+  {
+    "_id": "tank-3",
+    "tankName": "Tank-3 (Auxiliary)",
+    "fuelType": "CNG",
+    "capacity": 35000,
+    "currentVolume": 4200
+  }
+]

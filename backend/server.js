@@ -28,7 +28,9 @@ try {
     app.use('/api/prices', require('./routes/prices'));
     app.use('/api/loans', require('./routes/loans'));
     app.use('/api/stats', require('./routes/stats'));
+    app.use('/api/tanks', require('./routes/tanks'));
 } catch (error) {
+
     console.warn('Some routes are not yet implemented:', error.message);
 }
 

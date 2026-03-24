@@ -8,6 +8,8 @@ import Sales from './pages/Sales';
 import Maintenance from './pages/Maintenance';
 import Attendance from './pages/Attendance';
 import Loans from './pages/Loans';
+import Tanks from './pages/Tanks';
+
 
 const ProtectedRoute = ({ children }) => {
   const { user } = useAuth();
@@ -15,7 +17,7 @@ const ProtectedRoute = ({ children }) => {
   return (
     <>
       <Navbar />
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full">
         {children}
       </div>
     </>
@@ -26,7 +28,7 @@ function App() {
   return (
     <AuthProvider>
       <Router>
-        <div className="min-h-screen bg-[#1a1a2e] text-white">
+        <div className="min-h-screen text-white">
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route 
@@ -69,6 +71,15 @@ function App() {
                 </ProtectedRoute>
               } 
             />
+            <Route 
+              path="/tanks" 
+              element={
+                <ProtectedRoute>
+                  <Tanks />
+                </ProtectedRoute>
+              } 
+            />
+
           </Routes>
         </div>
       </Router>
