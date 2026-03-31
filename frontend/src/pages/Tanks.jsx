@@ -29,7 +29,7 @@ const Tanks = () => {
     const fetchTanks = async () => {
         try {
             const token = localStorage.getItem('token');
-            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+            const apiUrl = import.meta.env.VITE_API_URL || '';
             const res = await axios.get(`${apiUrl}/api/tanks`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
@@ -52,7 +52,7 @@ const Tanks = () => {
         setIsLoading(true);
         try {
             const token = localStorage.getItem('token');
-            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+            const apiUrl = import.meta.env.VITE_API_URL || '';
             await axios.post(`${apiUrl}/api/tanks`, formData, {
                 headers: { Authorization: `Bearer ${token}` }
             });
@@ -70,7 +70,7 @@ const Tanks = () => {
         setIsLoading(true);
         try {
             const token = localStorage.getItem('token');
-            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+            const apiUrl = import.meta.env.VITE_API_URL || '';
             await axios.put(`${apiUrl}/api/tanks/${id}`, formData, {
                 headers: { Authorization: `Bearer ${token}` }
             });
@@ -87,7 +87,7 @@ const Tanks = () => {
         if (!window.confirm("Are you sure you want to remove this storage terminal?")) return;
         try {
             const token = localStorage.getItem('token');
-            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+            const apiUrl = import.meta.env.VITE_API_URL || '';
             await axios.delete(`${apiUrl}/api/tanks/${id}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });

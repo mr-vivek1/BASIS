@@ -20,18 +20,20 @@ const Loans = () => {
     const [records, setRecords] = useState([]);
     const [formData, setFormData] = useState({
         partyName: '',
+        phoneNumber: '',
         type: 'Loan Given',
         amount: '',
         dueDate: '',
         notes: ''
     });
+
     const [paymentAmount, setPaymentAmount] = useState({});
     const [isLoading, setIsLoading] = useState(false);
 
     const fetchLoans = async () => {
         try {
             const token = localStorage.getItem('token');
-            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+            const apiUrl = import.meta.env.VITE_API_URL || '';
             const res = await axios.get(`${apiUrl}/api/loans`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
@@ -50,12 +52,13 @@ const Loans = () => {
         setIsLoading(true);
         try {
             const token = localStorage.getItem('token');
-            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+            const apiUrl = import.meta.env.VITE_API_URL || '';
             await axios.post(`${apiUrl}/api/loans`, formData, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             fetchLoans();
-            setFormData({ partyName: '', type: 'Loan Given', amount: '', dueDate: '', notes: '' });
+            setFormData({ partyName: '', phoneNumber: '', type: 'Loan Given', amount: '', dueDate: '', notes: '' });
+
         } catch (err) {
             console.error(err);
         } finally {
@@ -66,7 +69,7 @@ const Loans = () => {
     const handlePayment = async (id) => {
         try {
             const token = localStorage.getItem('token');
-            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+            const apiUrl = import.meta.env.VITE_API_URL || '';
             await axios.put(`${apiUrl}/api/loans/${id}/payment`, { paymentAmount: paymentAmount[id] }, {
                 headers: { Authorization: `Bearer ${token}` }
             });
@@ -122,6 +125,20 @@ const Loans = () => {
                                     />
                                 </div>
                             </div>
+                            <div className="space-y-2">
+                                <label className="text-xs font-bold uppercase tracking-widest text-slate-500 ml-1">Phone Number (For SMS Notifications)</label>
+                                <div className="relative">
+                                    <Plus className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-600" />
+                                    <input 
+                                        type="tel" 
+                                        className="input-glass w-full pl-12" 
+                                        value={formData.phoneNumber}
+                                        onChange={(e) => setFormData({...formData, phoneNumber: e.target.value})}
+                                        placeholder="+91 XXXXX XXXXX"
+                                    />
+                                </div>
+                            </div>
+
                             <div className="space-y-2">
                                 <label className="text-xs font-bold uppercase tracking-widest text-slate-500 ml-1">Transaction Category</label>
                                 <select 
@@ -181,7 +198,8 @@ const Loans = () => {
                         <AlertCircle className="w-6 h-6 text-red-500 flex-shrink-0" />
                         <div>
                             <p className="text-xs font-bold text-red-500 uppercase tracking-widest mb-1">Risk Protocol</p>
-                            <p className="text-slate-400 text-xs leading-relaxed">System-wide credit limits are enforced at ₹50,000 per party. Exceeding this triggers mandatory admin reconciliation.</p>
+                            <p className="text-slate-400 text-xs leading-relaxed">System-wide credit limits are enforced at ₹3,00,000 per party. Exceeding this triggers mandatory admin reconciliation.</p>
+
                         </div>
                     </div>
                 </motion.div>
@@ -223,7 +241,13 @@ const Loans = () => {
                                                 }`}>
                                                     {record.type}
                                                 </span>
+                                                {record.phoneNumber && (
+                                                    <span className="text-[10px] text-slate-500 font-bold bg-slate-900/50 border border-white/5 py-1 px-3 rounded-full">
+                                                        📞 {record.phoneNumber}
+                                                    </span>
+                                                )}
                                             </div>
+
                                             <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                                                 <div>
                                                    <p className="text-[10px] text-slate-500 uppercase font-bold mb-1">Total Principal</p>

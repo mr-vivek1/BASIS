@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "file-att-1774947799316",
+    "date": "2026-03-31T09:03:19.316Z",
+    "staffId": {
+      "_id": "admin-fallback",
+      "name": "Main Admin",
+      "role": "admin"
+    },
+    "shiftType": "Morning",
+    "checkIn": "2026-03-31T09:03:19.316Z",
+    "checkOut": null,
+    "hoursWorked": null,
+    "notes": ""
+  }
+]

@@ -28,7 +28,7 @@ const Maintenance = () => {
     const fetchRecords = async () => {
         try {
             const token = localStorage.getItem('token');
-            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+            const apiUrl = import.meta.env.VITE_API_URL || '';
             const res = await axios.get(`${apiUrl}/api/maintenance`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
@@ -47,7 +47,7 @@ const Maintenance = () => {
         setIsLoading(true);
         try {
             const token = localStorage.getItem('token');
-            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+            const apiUrl = import.meta.env.VITE_API_URL || '';
             await axios.post(`${apiUrl}/api/maintenance`, formData, {
                 headers: { Authorization: `Bearer ${token}` }
             });
@@ -69,7 +69,7 @@ const Maintenance = () => {
     const updateStatus = async (id, newStatus) => {
         try {
             const token = localStorage.getItem('token');
-            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+            const apiUrl = import.meta.env.VITE_API_URL || '';
             await axios.put(`${apiUrl}/api/maintenance/${id}`, { status: newStatus }, {
                 headers: { Authorization: `Bearer ${token}` }
             });

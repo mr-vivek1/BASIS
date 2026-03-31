@@ -1,0 +1,15 @@
+[
+  {
+    "_id": "file-loan-1774948440620",
+    "date": "2026-03-31T09:14:00.620Z",
+    "partyName": "vivek",
+    "phoneNumber": "789216238",
+    "type": "Loan Given",
+    "amount": 200000,
+    "dueDate": "2026-04-01",
+    "balance": 199997,
+    "amountPaid": 3,
+    "status": "Partial",
+    "notes": "hsd"
+  }
+]

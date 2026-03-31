@@ -24,7 +24,7 @@ const Attendance = () => {
     const fetchAttendance = async () => {
         try {
             const token = localStorage.getItem('token');
-            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+            const apiUrl = import.meta.env.VITE_API_URL || '';
             const res = await axios.get(`${apiUrl}/api/attendance`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
@@ -49,7 +49,7 @@ const Attendance = () => {
         setIsLoading(true);
         try {
             const token = localStorage.getItem('token');
-            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+            const apiUrl = import.meta.env.VITE_API_URL || '';
             await axios.post(`${apiUrl}/api/attendance/checkin`, { shiftType }, {
                 headers: { Authorization: `Bearer ${token}` }
             });
@@ -65,7 +65,7 @@ const Attendance = () => {
         setIsLoading(true);
         try {
             const token = localStorage.getItem('token');
-            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+            const apiUrl = import.meta.env.VITE_API_URL || '';
             await axios.put(`${apiUrl}/api/attendance/checkout/${todayRecord._id}`, {}, {
                 headers: { Authorization: `Bearer ${token}` }
             });

@@ -64,7 +64,7 @@ const Dashboard = () => {
   const fetchDashboardData = async () => {
     try {
       const token = localStorage.getItem('token');
-      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      const apiUrl = import.meta.env.VITE_API_URL || '';
       
       const [statsRes, tanksRes] = await Promise.all([
           axios.get(`${apiUrl}/api/stats/today`, { headers: { Authorization: `Bearer ${token}` } }),
@@ -92,7 +92,7 @@ const Dashboard = () => {
 
     try {
         const token = localStorage.getItem('token');
-        const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+        const apiUrl = import.meta.env.VITE_API_URL || '';
         await axios.put(`${apiUrl}/api/tanks/refill/${tankId}`, { refillAmount: amount }, {
             headers: { Authorization: `Bearer ${token}` }
         });
