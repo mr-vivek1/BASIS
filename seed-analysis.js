@@ -38,4 +38,15 @@ const seedSales = () => {
     console.log('Seeded sales analysis data.');
 };
 
+const seedPrices = () => {
+    const prices = [
+        { _id: `seed-price-${Date.now()}-1`, fuelType: 'Petrol', pricePerLitre: 106.50, date: new Date() },
+        { _id: `seed-price-${Date.now()}-2`, fuelType: 'Diesel', pricePerLitre: 92.45, date: new Date() },
+        { _id: `seed-price-${Date.now()}-3`, fuelType: 'CNG', pricePerLitre: 76.80, date: new Date() }
+    ];
+    fs.writeFileSync(path.join(DATA_DIR, 'prices.json'), JSON.stringify(prices, null, 2));
+    console.log('Seeded fuel prices data.');
+};
+
 seedSales();
+seedPrices();

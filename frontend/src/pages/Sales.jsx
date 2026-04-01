@@ -33,6 +33,27 @@ const Sales = () => {
   const [date, setDate] = useState(new Date().toISOString().split('T')[0]);
   const [isLoading, setIsLoading] = useState(false);
   const [tanks, setTanks] = useState([]);
+  const [currentRates, setCurrentRates] = useState({});
+
+  const fetchRates = async () => {
+    try {
+      const token = localStorage.getItem('token');
+      const apiUrl = import.meta.env.VITE_API_URL || '';
+      const res = await axios.get(`${apiUrl}/api/prices/current`, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      const rates = {};
+      res.data.forEach(p => {
+        rates[p.fuelType] = p.pricePerLitre;
+      });
+      setCurrentRates(rates);
+      if (!formData.pricePerLitre) {
+          setFormData(prev => ({...prev, pricePerLitre: rates[prev.fuelType] || ''}));
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   const fetchTanks = async () => {
     try {
@@ -64,7 +85,14 @@ const Sales = () => {
   useEffect(() => {
     fetchSales();
     fetchTanks();
+    fetchRates();
   }, [date]);
+
+  useEffect(() => {
+    if (currentRates[formData.fuelType]) {
+      setFormData(prev => ({...prev, pricePerLitre: currentRates[formData.fuelType]}));
+    }
+  }, [formData.fuelType]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

@@ -23,7 +23,8 @@ const Navbar = () => {
   const navItems = [
     { name: 'Dashboard', path: '/', icon: LayoutDashboard },
     { name: 'Sales', path: '/sales', icon: Fuel },
-    { name: 'Inventory', path: '/tanks', icon: Database },
+    { name: 'Tanks', path: '/tanks', icon: Database },
+    { name: 'Prices', path: '/prices', icon: IndianRupee },
     { name: 'Maintenance', path: '/maintenance', icon: Settings },
     { name: 'Attendance', path: '/attendance', icon: Users },
     { name: 'Loans', path: '/loans', icon: CircleDollarSign },

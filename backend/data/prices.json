@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "seed-price-1775043571375-1",
+    "fuelType": "Petrol",
+    "pricePerLitre": 106.5,
+    "date": "2026-04-01T11:39:31.375Z"
+  },
+  {
+    "_id": "seed-price-1775043571376-2",
+    "fuelType": "Diesel",
+    "pricePerLitre": 92.45,
+    "date": "2026-04-01T11:39:31.376Z"
+  },
+  {
+    "_id": "seed-price-1775043571376-3",
+    "fuelType": "CNG",
+    "pricePerLitre": 76.8,
+    "date": "2026-04-01T11:39:31.376Z"
+  }
+]

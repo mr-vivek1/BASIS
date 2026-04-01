@@ -7,8 +7,8 @@
     "type": "Loan Given",
     "amount": 200000,
     "dueDate": "2026-04-01",
-    "balance": 199997,
-    "amountPaid": 3,
+    "balance": 149997,
+    "amountPaid": 50003,
     "status": "Partial",
     "notes": "hsd"
   }

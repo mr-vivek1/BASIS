@@ -4,7 +4,7 @@
     "tankName": "Tank-1 (Main North)",
     "fuelType": "Petrol",
     "capacity": 35000,
-    "currentVolume": 20000
+    "currentVolume": 19799
   },
   {
     "_id": "tank-2",

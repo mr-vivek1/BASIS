@@ -1,203 +1,23 @@
 [
   {
-    "_id": "seed-sale-1774620528129-0.8335506023860744",
-    "date": "2026-03-27T14:08:48.128Z",
+    "_id": "seed-sale-1775043571364-0.1021691853501655",
+    "date": "2026-04-01T11:39:31.363Z",
+    "pumpId": "Pump-1",
+    "fuelType": "Petrol",
+    "openingStock": 1000,
+    "closingStock": 585,
+    "salesLitres": 415,
+    "pricePerLitre": 106.1,
+    "totalRevenue": 44031.5,
+    "recordedBy": {
+      "_id": "admin-fallback",
+      "name": "Main Admin"
+    }
+  },
+  {
+    "_id": "seed-sale-1775043571364-0.7182471159248079",
+    "date": "2026-04-01T11:39:31.363Z",
     "pumpId": "Pump-2",
-    "fuelType": "Petrol",
-    "openingStock": 1000,
-    "closingStock": 739,
-    "salesLitres": 261,
-    "pricePerLitre": 106.1,
-    "totalRevenue": 27692.1,
-    "recordedBy": {
-      "_id": "admin-fallback",
-      "name": "Main Admin"
-    }
-  },
-  {
-    "_id": "seed-sale-1774620528129-0.5791537525027192",
-    "date": "2026-03-27T14:08:48.128Z",
-    "pumpId": "Pump-3",
-    "fuelType": "Diesel",
-    "openingStock": 1000,
-    "closingStock": 788,
-    "salesLitres": 212,
-    "pricePerLitre": 92.27,
-    "totalRevenue": 19561.24,
-    "recordedBy": {
-      "_id": "admin-fallback",
-      "name": "Main Admin"
-    }
-  },
-  {
-    "_id": "seed-sale-1774620528129-0.3023860900994061",
-    "date": "2026-03-27T14:08:48.128Z",
-    "pumpId": "Pump-1",
-    "fuelType": "CNG",
-    "openingStock": 1000,
-    "closingStock": 404,
-    "salesLitres": 596,
-    "pricePerLitre": 76.59,
-    "totalRevenue": 45647.64,
-    "recordedBy": {
-      "_id": "admin-fallback",
-      "name": "Main Admin"
-    }
-  },
-  {
-    "_id": "seed-sale-1774620528129-0.7559317045325279",
-    "date": "2026-03-26T14:08:48.129Z",
-    "pumpId": "Pump-3",
-    "fuelType": "Petrol",
-    "openingStock": 1000,
-    "closingStock": 765,
-    "salesLitres": 235,
-    "pricePerLitre": 106.1,
-    "totalRevenue": 24933.5,
-    "recordedBy": {
-      "_id": "admin-fallback",
-      "name": "Main Admin"
-    }
-  },
-  {
-    "_id": "seed-sale-1774620528129-0.554211745748605",
-    "date": "2026-03-26T14:08:48.129Z",
-    "pumpId": "Pump-1",
-    "fuelType": "Diesel",
-    "openingStock": 1000,
-    "closingStock": 709,
-    "salesLitres": 291,
-    "pricePerLitre": 92.27,
-    "totalRevenue": 26850.57,
-    "recordedBy": {
-      "_id": "admin-fallback",
-      "name": "Main Admin"
-    }
-  },
-  {
-    "_id": "seed-sale-1774620528129-0.8170865348037777",
-    "date": "2026-03-26T14:08:48.129Z",
-    "pumpId": "Pump-1",
-    "fuelType": "CNG",
-    "openingStock": 1000,
-    "closingStock": 708,
-    "salesLitres": 292,
-    "pricePerLitre": 76.59,
-    "totalRevenue": 22364.28,
-    "recordedBy": {
-      "_id": "admin-fallback",
-      "name": "Main Admin"
-    }
-  },
-  {
-    "_id": "seed-sale-1774620528130-0.4496007948486641",
-    "date": "2026-03-25T14:08:48.129Z",
-    "pumpId": "Pump-3",
-    "fuelType": "Petrol",
-    "openingStock": 1000,
-    "closingStock": 561,
-    "salesLitres": 439,
-    "pricePerLitre": 106.1,
-    "totalRevenue": 46577.9,
-    "recordedBy": {
-      "_id": "admin-fallback",
-      "name": "Main Admin"
-    }
-  },
-  {
-    "_id": "seed-sale-1774620528130-0.8442492989168865",
-    "date": "2026-03-25T14:08:48.129Z",
-    "pumpId": "Pump-2",
-    "fuelType": "Diesel",
-    "openingStock": 1000,
-    "closingStock": 769,
-    "salesLitres": 231,
-    "pricePerLitre": 92.27,
-    "totalRevenue": 21314.37,
-    "recordedBy": {
-      "_id": "admin-fallback",
-      "name": "Main Admin"
-    }
-  },
-  {
-    "_id": "seed-sale-1774620528130-0.5360078829273074",
-    "date": "2026-03-25T14:08:48.129Z",
-    "pumpId": "Pump-1",
-    "fuelType": "CNG",
-    "openingStock": 1000,
-    "closingStock": 885,
-    "salesLitres": 115,
-    "pricePerLitre": 76.59,
-    "totalRevenue": 8807.85,
-    "recordedBy": {
-      "_id": "admin-fallback",
-      "name": "Main Admin"
-    }
-  },
-  {
-    "_id": "seed-sale-1774620528130-0.37153649566921554",
-    "date": "2026-03-24T14:08:48.130Z",
-    "pumpId": "Pump-1",
-    "fuelType": "Petrol",
-    "openingStock": 1000,
-    "closingStock": 764,
-    "salesLitres": 236,
-    "pricePerLitre": 106.1,
-    "totalRevenue": 25039.6,
-    "recordedBy": {
-      "_id": "admin-fallback",
-      "name": "Main Admin"
-    }
-  },
-  {
-    "_id": "seed-sale-1774620528130-0.5406715668250041",
-    "date": "2026-03-24T14:08:48.130Z",
-    "pumpId": "Pump-3",
-    "fuelType": "Diesel",
-    "openingStock": 1000,
-    "closingStock": 729,
-    "salesLitres": 271,
-    "pricePerLitre": 92.27,
-    "totalRevenue": 25005.17,
-    "recordedBy": {
-      "_id": "admin-fallback",
-      "name": "Main Admin"
-    }
-  },
-  {
-    "_id": "seed-sale-1774620528130-0.6550436452614271",
-    "date": "2026-03-24T14:08:48.130Z",
-    "pumpId": "Pump-3",
-    "fuelType": "CNG",
-    "openingStock": 1000,
-    "closingStock": 885,
-    "salesLitres": 115,
-    "pricePerLitre": 76.59,
-    "totalRevenue": 8807.85,
-    "recordedBy": {
-      "_id": "admin-fallback",
-      "name": "Main Admin"
-    }
-  },
-  {
-    "_id": "seed-sale-1774620528130-0.46583817485317125",
-    "date": "2026-03-23T14:08:48.130Z",
-    "pumpId": "Pump-1",
-    "fuelType": "Petrol",
-    "openingStock": 1000,
-    "closingStock": 679,
-    "salesLitres": 321,
-    "pricePerLitre": 106.1,
-    "totalRevenue": 34058.1,
-    "recordedBy": {
-      "_id": "admin-fallback",
-      "name": "Main Admin"
-    }
-  },
-  {
-    "_id": "seed-sale-1774620528130-0.8999360229121723",
-    "date": "2026-03-23T14:08:48.130Z",
-    "pumpId": "Pump-1",
     "fuelType": "Diesel",
     "openingStock": 1000,
     "closingStock": 805,
@@ -210,105 +30,285 @@
     }
   },
   {
-    "_id": "seed-sale-1774620528130-0.16918328995111942",
-    "date": "2026-03-23T14:08:48.130Z",
-    "pumpId": "Pump-1",
+    "_id": "seed-sale-1775043571364-0.43500653585972404",
+    "date": "2026-04-01T11:39:31.363Z",
+    "pumpId": "Pump-3",
     "fuelType": "CNG",
     "openingStock": 1000,
-    "closingStock": 694,
-    "salesLitres": 306,
+    "closingStock": 584,
+    "salesLitres": 416,
     "pricePerLitre": 76.59,
-    "totalRevenue": 23436.54,
+    "totalRevenue": 31861.44,
     "recordedBy": {
       "_id": "admin-fallback",
       "name": "Main Admin"
     }
   },
   {
-    "_id": "seed-sale-1774620528130-0.16179992417406075",
-    "date": "2026-03-22T14:08:48.130Z",
-    "pumpId": "Pump-1",
+    "_id": "seed-sale-1775043571364-0.4229750579716859",
+    "date": "2026-03-31T11:39:31.364Z",
+    "pumpId": "Pump-3",
     "fuelType": "Petrol",
     "openingStock": 1000,
-    "closingStock": 830,
-    "salesLitres": 170,
+    "closingStock": 766,
+    "salesLitres": 234,
     "pricePerLitre": 106.1,
-    "totalRevenue": 18037,
+    "totalRevenue": 24827.4,
     "recordedBy": {
       "_id": "admin-fallback",
       "name": "Main Admin"
     }
   },
   {
-    "_id": "seed-sale-1774620528130-0.7498094194613929",
-    "date": "2026-03-22T14:08:48.130Z",
+    "_id": "seed-sale-1775043571364-0.375653567700836",
+    "date": "2026-03-31T11:39:31.364Z",
     "pumpId": "Pump-1",
     "fuelType": "Diesel",
     "openingStock": 1000,
-    "closingStock": 482,
-    "salesLitres": 518,
+    "closingStock": 732,
+    "salesLitres": 268,
     "pricePerLitre": 92.27,
-    "totalRevenue": 47795.86,
+    "totalRevenue": 24728.36,
     "recordedBy": {
       "_id": "admin-fallback",
       "name": "Main Admin"
     }
   },
   {
-    "_id": "seed-sale-1774620528130-0.06336658259400196",
-    "date": "2026-03-22T14:08:48.130Z",
-    "pumpId": "Pump-3",
+    "_id": "seed-sale-1775043571364-0.5801572162738622",
+    "date": "2026-03-31T11:39:31.364Z",
+    "pumpId": "Pump-1",
     "fuelType": "CNG",
     "openingStock": 1000,
-    "closingStock": 698,
-    "salesLitres": 302,
+    "closingStock": 499,
+    "salesLitres": 501,
     "pricePerLitre": 76.59,
-    "totalRevenue": 23130.18,
+    "totalRevenue": 38371.59,
     "recordedBy": {
       "_id": "admin-fallback",
       "name": "Main Admin"
     }
   },
   {
-    "_id": "seed-sale-1774620528130-0.356737169861329",
-    "date": "2026-03-21T14:08:48.130Z",
-    "pumpId": "Pump-3",
+    "_id": "seed-sale-1775043571364-0.5513539336981015",
+    "date": "2026-03-30T11:39:31.364Z",
+    "pumpId": "Pump-2",
     "fuelType": "Petrol",
     "openingStock": 1000,
-    "closingStock": 447,
-    "salesLitres": 553,
+    "closingStock": 499,
+    "salesLitres": 501,
     "pricePerLitre": 106.1,
-    "totalRevenue": 58673.3,
+    "totalRevenue": 53156.1,
     "recordedBy": {
       "_id": "admin-fallback",
       "name": "Main Admin"
     }
   },
   {
-    "_id": "seed-sale-1774620528130-0.9970513046031784",
-    "date": "2026-03-21T14:08:48.130Z",
+    "_id": "seed-sale-1775043571364-0.18101704247937878",
+    "date": "2026-03-30T11:39:31.364Z",
     "pumpId": "Pump-2",
     "fuelType": "Diesel",
     "openingStock": 1000,
-    "closingStock": 529,
-    "salesLitres": 471,
+    "closingStock": 768,
+    "salesLitres": 232,
     "pricePerLitre": 92.27,
-    "totalRevenue": 43459.17,
+    "totalRevenue": 21406.64,
     "recordedBy": {
       "_id": "admin-fallback",
       "name": "Main Admin"
     }
   },
   {
-    "_id": "seed-sale-1774620528130-0.6026671291900886",
-    "date": "2026-03-21T14:08:48.130Z",
+    "_id": "seed-sale-1775043571364-0.5971595179525971",
+    "date": "2026-03-30T11:39:31.364Z",
+    "pumpId": "Pump-1",
+    "fuelType": "CNG",
+    "openingStock": 1000,
+    "closingStock": 841,
+    "salesLitres": 159,
+    "pricePerLitre": 76.59,
+    "totalRevenue": 12177.81,
+    "recordedBy": {
+      "_id": "admin-fallback",
+      "name": "Main Admin"
+    }
+  },
+  {
+    "_id": "seed-sale-1775043571364-0.2524167229834031",
+    "date": "2026-03-29T11:39:31.364Z",
+    "pumpId": "Pump-1",
+    "fuelType": "Petrol",
+    "openingStock": 1000,
+    "closingStock": 427,
+    "salesLitres": 573,
+    "pricePerLitre": 106.1,
+    "totalRevenue": 60795.3,
+    "recordedBy": {
+      "_id": "admin-fallback",
+      "name": "Main Admin"
+    }
+  },
+  {
+    "_id": "seed-sale-1775043571364-0.41142902589793995",
+    "date": "2026-03-29T11:39:31.364Z",
+    "pumpId": "Pump-2",
+    "fuelType": "Diesel",
+    "openingStock": 1000,
+    "closingStock": 595,
+    "salesLitres": 405,
+    "pricePerLitre": 92.27,
+    "totalRevenue": 37369.35,
+    "recordedBy": {
+      "_id": "admin-fallback",
+      "name": "Main Admin"
+    }
+  },
+  {
+    "_id": "seed-sale-1775043571364-0.10381045980968617",
+    "date": "2026-03-29T11:39:31.364Z",
+    "pumpId": "Pump-2",
+    "fuelType": "CNG",
+    "openingStock": 1000,
+    "closingStock": 779,
+    "salesLitres": 221,
+    "pricePerLitre": 76.59,
+    "totalRevenue": 16926.39,
+    "recordedBy": {
+      "_id": "admin-fallback",
+      "name": "Main Admin"
+    }
+  },
+  {
+    "_id": "seed-sale-1775043571364-0.7376405675123714",
+    "date": "2026-03-28T11:39:31.364Z",
+    "pumpId": "Pump-1",
+    "fuelType": "Petrol",
+    "openingStock": 1000,
+    "closingStock": 744,
+    "salesLitres": 256,
+    "pricePerLitre": 106.1,
+    "totalRevenue": 27161.6,
+    "recordedBy": {
+      "_id": "admin-fallback",
+      "name": "Main Admin"
+    }
+  },
+  {
+    "_id": "seed-sale-1775043571364-0.6011110042260205",
+    "date": "2026-03-28T11:39:31.364Z",
+    "pumpId": "Pump-3",
+    "fuelType": "Diesel",
+    "openingStock": 1000,
+    "closingStock": 780,
+    "salesLitres": 220,
+    "pricePerLitre": 92.27,
+    "totalRevenue": 20299.4,
+    "recordedBy": {
+      "_id": "admin-fallback",
+      "name": "Main Admin"
+    }
+  },
+  {
+    "_id": "seed-sale-1775043571364-0.6121377117193258",
+    "date": "2026-03-28T11:39:31.364Z",
     "pumpId": "Pump-3",
     "fuelType": "CNG",
     "openingStock": 1000,
-    "closingStock": 544,
-    "salesLitres": 456,
+    "closingStock": 794,
+    "salesLitres": 206,
     "pricePerLitre": 76.59,
-    "totalRevenue": 34925.04,
+    "totalRevenue": 15777.54,
+    "recordedBy": {
+      "_id": "admin-fallback",
+      "name": "Main Admin"
+    }
+  },
+  {
+    "_id": "seed-sale-1775043571364-0.014534389659248692",
+    "date": "2026-03-27T11:39:31.364Z",
+    "pumpId": "Pump-3",
+    "fuelType": "Petrol",
+    "openingStock": 1000,
+    "closingStock": 585,
+    "salesLitres": 415,
+    "pricePerLitre": 106.1,
+    "totalRevenue": 44031.5,
+    "recordedBy": {
+      "_id": "admin-fallback",
+      "name": "Main Admin"
+    }
+  },
+  {
+    "_id": "seed-sale-1775043571364-0.3483675305272105",
+    "date": "2026-03-27T11:39:31.364Z",
+    "pumpId": "Pump-3",
+    "fuelType": "Diesel",
+    "openingStock": 1000,
+    "closingStock": 771,
+    "salesLitres": 229,
+    "pricePerLitre": 92.27,
+    "totalRevenue": 21129.83,
+    "recordedBy": {
+      "_id": "admin-fallback",
+      "name": "Main Admin"
+    }
+  },
+  {
+    "_id": "seed-sale-1775043571364-0.25589044434028085",
+    "date": "2026-03-27T11:39:31.364Z",
+    "pumpId": "Pump-1",
+    "fuelType": "CNG",
+    "openingStock": 1000,
+    "closingStock": 749,
+    "salesLitres": 251,
+    "pricePerLitre": 76.59,
+    "totalRevenue": 19224.09,
+    "recordedBy": {
+      "_id": "admin-fallback",
+      "name": "Main Admin"
+    }
+  },
+  {
+    "_id": "seed-sale-1775043571364-0.8467527333156201",
+    "date": "2026-03-26T11:39:31.364Z",
+    "pumpId": "Pump-3",
+    "fuelType": "Petrol",
+    "openingStock": 1000,
+    "closingStock": 872,
+    "salesLitres": 128,
+    "pricePerLitre": 106.1,
+    "totalRevenue": 13580.8,
+    "recordedBy": {
+      "_id": "admin-fallback",
+      "name": "Main Admin"
+    }
+  },
+  {
+    "_id": "seed-sale-1775043571364-0.8141471612714435",
+    "date": "2026-03-26T11:39:31.364Z",
+    "pumpId": "Pump-3",
+    "fuelType": "Diesel",
+    "openingStock": 1000,
+    "closingStock": 843,
+    "salesLitres": 157,
+    "pricePerLitre": 92.27,
+    "totalRevenue": 14486.39,
+    "recordedBy": {
+      "_id": "admin-fallback",
+      "name": "Main Admin"
+    }
+  },
+  {
+    "_id": "seed-sale-1775043571364-0.016111877706245892",
+    "date": "2026-03-26T11:39:31.364Z",
+    "pumpId": "Pump-1",
+    "fuelType": "CNG",
+    "openingStock": 1000,
+    "closingStock": 455,
+    "salesLitres": 545,
+    "pricePerLitre": 76.59,
+    "totalRevenue": 41741.55,
     "recordedBy": {
       "_id": "admin-fallback",
       "name": "Main Admin"

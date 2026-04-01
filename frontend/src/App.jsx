@@ -9,6 +9,7 @@ import Maintenance from './pages/Maintenance';
 import Attendance from './pages/Attendance';
 import Loans from './pages/Loans';
 import Tanks from './pages/Tanks';
+import Prices from './pages/Prices';
 
 
 const ProtectedRoute = ({ children }) => {
@@ -76,6 +77,14 @@ function App() {
               element={
                 <ProtectedRoute>
                   <Tanks />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/prices" 
+              element={
+                <ProtectedRoute>
+                  <Prices />
                 </ProtectedRoute>
               } 
             />
