@@ -39,7 +39,7 @@ const Navbar = () => {
              <Fuel className="text-white w-5 h-5" />
           </div>
           <span className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
-            PETROL<span className="text-red-500">PRO</span>
+            PETRO<span className="text-red-500">PRO</span>
           </span>
         </Link>
         
